@@ -51,6 +51,7 @@
                 window.location="http://fotoflexer.com/API/API_Loader_v1_01.php?ff_image_url="+ff_image_url+"&ff_callback_url="+ff_callback_url+
                     "&ff_cancel_url="+ff_cancel_url+"&ff_lang="+ff_lang;
             }
+            return false;
         });
         
     });
