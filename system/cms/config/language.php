@@ -161,4 +161,4 @@ $config['supported_languages'] = array(
 |	en
 |
 */
-$config['default_language'] = 'en';
+$config['default_language'] = 'pl';

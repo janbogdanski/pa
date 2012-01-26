@@ -53,6 +53,7 @@ class Public_Controller extends MY_Controller
 				<script type="text/javascript">
 					var APPPATH_URI = "'.APPPATH_URI.'";
 					var BASE_URI = "'.BASE_URI.'";
+					var BASE_URL = "'.base_url().'";
 				</script>' );
 
 		// Is there a layout file for this module?
