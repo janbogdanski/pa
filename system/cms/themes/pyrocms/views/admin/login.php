@@ -42,12 +42,12 @@
 		<?php echo form_open('admin/login'); ?>
 			<ul>
 				<li>
-					<input type="text" name="email" value="<?php echo lang('email_label'); ?>" onblur="if (this.value == '') {this.value = '<?php echo lang('email_label'); ?>';}"  onfocus="if (this.value == '<?php echo lang('email_label'); ?>') {this.value = '';}" />
+					<input type="text" name="email" value="" onblur=""  onfocus="" />
 					<?php echo theme_image('admin/email-icon.png', array('class' => 'input-email', 'alt' => lang('email_label')));?>
 				</li>
 				
 				<li>
-					<input type="password" name="password" value="<?php echo lang('password_label'); ?>" onblur="if (this.value == '') {this.value = '<?php echo lang('password_label'); ?>';}"  onfocus="if (this.value == '<?php echo lang('password_label'); ?>') {this.value = '';}"  />
+					<input type="password" name="password" value="" onblur="if (this.value == '') {this.value = '<?php echo lang('password_label'); ?>';}"  onfocus="if (this.value == '<?php echo lang('password_label'); ?>') {this.value = '';}"  />
 					<?php echo theme_image('admin/lock-icon.png', array('class' => 'input-password', 'alt' => lang('password_label')));?>
 				</li>
 				
