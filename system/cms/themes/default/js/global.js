@@ -150,6 +150,6 @@ global_userMustBeLogged = {
     "path" : {
 
     },
-    "segment" : ['images']
+    "segment" : ['images', 'logo']
 
     }
