@@ -151,5 +151,4 @@ global_userMustBeLogged = {
 
     },
     "segment" : ['images', 'logo']
-
     }
