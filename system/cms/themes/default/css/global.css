@@ -180,7 +180,7 @@ aside .widget ul { margin-left: 30px; }
 .notice-box { background:#fffbe2 none repeat scroll 0 0; border: 1px solid #ffe222; color: #ffe222; }
 .success-box {background: #eeffee none repeat scroll 0 0; border: 1px solid #99cc99; color: #99cc99; }
 .error-box p, .notice-box p, .success-box p { padding: 0; margin-bottom: 10px; }
-.clear {height:0;font-size:0px;}
+.clear {height:0;font-size:0px; clear: both;}
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
@@ -224,4 +224,57 @@ aside .widget ul { margin-left: 30px; }
 
 .button:active {
     background: #7e7e7e;
+}
+
+
+.ajax-loader {
+    background: url("../img/ajax-loader.gif") repeat scroll 0 0 transparent;
+    display: none;
+    height: 15px;
+    width: 128px;
+}
+
+
+
+
+
+.pagination li{
+    border:0; margin:0; padding:0;
+    font-size:11px;
+    list-style:none;
+}
+.pagination a{
+    border:solid 1px #DDDDDD;
+    margin-right:2px;
+}
+.pagination .prev,
+.pagination .next {
+    color:#666666;
+    display:block;
+    float:left;
+    font-weight:bold;
+    padding:3px 4px;
+}
+.pagination .next a,
+.pagination .prev a {
+    font-weight:bold;
+    border:solid 1px #FFFFFF;
+}
+.pagination .active{
+    color:#ff0084;
+    font-weight:bold;
+    display:block;
+    float:left;
+    padding:4px 6px;
+}
+.pagination a:link,
+.pagination a:visited {
+    color:#0063e3;
+    display:block;
+    float:left;
+    padding:3px 6px;
+    text-decoration:none;
+}
+.pagination a:hover{
+    border:solid 1px #666666;
 }
