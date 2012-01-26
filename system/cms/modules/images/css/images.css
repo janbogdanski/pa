@@ -1,0 +1,41 @@
+#galeriaObrazow{
+    width:700px;
+    margin-top:20px;
+    font-size:9px;
+    color:#333;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+#galeriaObrazow a:hover{}
+
+.containerThumbnails{
+    list-style:none;
+    font-size:12px;
+}
+
+.containerThumbnails li{
+    float:left;
+    list-style:none;
+    margin:0 12px 16px 0;
+    width:180px;
+    height:270px;
+    z-index:1;
+    position:relative;
+    border:1px dotted silver;
+}
+
+.containerThumbnails p{
+    margin:0px;
+    padding:0px;
+    margin-left:10px;
+}
+
+.containerThumbnails img{
+    margin-left:10px;
+    border:0px solid red;
+}
+
+.containerThumbnails input{
+    font-size:10px;	
+}
