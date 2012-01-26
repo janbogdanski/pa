@@ -54,8 +54,5 @@ $route['edit-profile']	= 'users/edit';
 
 $route['sitemap.xml'] = 'sitemap/xml';
 
-
-$route['obrazy'] = 'images/index';
-
 //$route['images'] = 'images/index';
 /* End of file routes.php */
