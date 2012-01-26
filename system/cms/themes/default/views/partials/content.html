@@ -8,6 +8,8 @@
 
 	{{ theme:partial name="breadcrumbs" }}
 	{{ session:messages success="success-box" notice="notice-box" error="error-box" }}
+    <div class="user_not_logged_in error-box" style="display: none;">log in</div>
+
 	<section class="post clearfix">
 		{{ template:body }}
 	</section>

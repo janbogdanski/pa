@@ -129,6 +129,13 @@ class Users extends Public_Controller
 		));
 	}
 
+    /**
+     * Metoda dla ajaxa, zwraca 1 gdy zalogowany
+     */
+    public function is_logged_in(){
+        echo $this->ion_auth->logged_in();
+    }
+
 	/**
 	 * Method to log the user out of the system
 	 *

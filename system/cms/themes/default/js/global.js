@@ -101,3 +101,55 @@ jQuery.fn.nudge = function(params) {
 	});
 	return this;
 };
+
+var logged_in_status_interval = false;
+jQuery(document).ready(function(){
+    var iter = 0;
+
+    //sprawdzamy czy strona na ktorej jest user do poprawnego dzialania wymaga bycia zalogowanym
+    // jesli tak, ustawiamy interwal sprawdzajacy czy jest
+
+    for(iter in global_userMustBeLogged['segment']){
+
+        if($.url.segment(0) == global_userMustBeLogged['segment'][iter]){
+
+            if(!logged_in_status_interval){
+                setInterval("check_user_logged()", 50000);
+                logged_in_status_interval = true;
+            }
+        }
+    }
+
+    iter = 0;
+    for(iter in global_userMustBeLogged['path']){
+
+        if($.url.attr("path") == global_userMustBeLogged['path'][iter]){
+
+            if(!logged_in_status_interval){
+                setInterval("check_user_logged()", 50000);
+                logged_in_status_interval = true;
+            }
+        }
+    }
+});
+
+function check_user_logged(){
+
+    $.ajax({
+        url: BASE_URI + 'users/is_logged_in',
+        success: function(data) {
+            if(1 != data){
+                //niezalogowany!
+                $(".user_not_logged_in").show();
+            }
+        }
+    });
+}
+
+global_userMustBeLogged = {
+    "path" : {
+
+    },
+    "segment" : ['images']
+
+    }
