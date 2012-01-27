@@ -16,7 +16,6 @@ class Images_m extends MY_Model {
         if (!$this->ion_auth->logged_in()) {
             return false;
         }
-
 //       echo  $user = (int)$this->session->userdata('user_id');
         $user =  $this->current_user->id;
         if (isset($images->links->thumb_link)) {
