@@ -1,0 +1,10 @@
+#formularz div{
+    margin: 10px 0;
+}
+.textCol{
+    width: 45%;
+    float: left;
+}
+.colorCol{
+    float: right;
+}

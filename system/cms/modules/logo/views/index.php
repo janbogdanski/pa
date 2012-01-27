@@ -1,61 +1,77 @@
+<?php
+
+echo '<h2>'.lang('logo_header').'</h2>';
+
+echo '<div id="image">';
+echo img(array('src' => 'logo/image', 'id' => 'imagesrc'), true);
+echo '</div>';
+echo '<div class="ajax-loader"></div>';
+
+echo form_open(base_url('logo/image'), 'id="logo_form" method="post"');
+
+
+echo '<div id="formularz">';
+echo '<div class="textCol">';
+echo '<div>';
+echo lang('logo_field_text');
+echo form_input('text','Wpisz tekst', 'class="key" id="text"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_fontSize');
+echo form_input('fontSize','17', 'class="key" id="fontSize"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_fontFamily');
+echo form_dropdown('fontFamily', $fonts, 'ALAMAKOT.TTF', 'class="change" id="fontFamily"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_xPaddingLeft');
+echo form_input('xPaddingLeft','10', 'class="key" id="xPaddingLeft"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_yPaddingTop');
+
+echo form_input('yPaddingTop','5', 'class="key" id="yPaddingTop"');
+echo '</div>';
+echo '</div>'; //leftcol
+
+echo '<div class="colorCol">';
+echo '<div>';
+echo lang('logo_field_imgBackground');
+
+echo form_input('imgBackground','080808', 'class="color, change" id="imgBackground" size="7" maxlength="6"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_fontColor');
+
+echo form_input('fontColor','CCCCCC', 'class="color, change" id="fontColor" size="7" maxlength="6"');
+echo '</div>';
+
+echo '<div>';
+echo lang('logo_field_fontShadow');
+
+echo form_input('fontShadow','FF0000', 'class="color, change" id="fontShadow" size="7" maxlength="6"');
+echo '</div>';
+echo '</div>'; //colorCol
+echo '<div class="clear"></div>';
+echo '</div>';
+echo '<div class="clear"></div>';
+
+echo form_button('reload_logo', lang('logo_reload'), 'id="reload_logo"');?>
 {{ if user:logged_in }}
 
-<?php echo form_open(base_url('images/upload'), 'id="multiForm" enctype="multipart/form-data"'); ?>
-
-<div class="form_inputs" id="blog-content-tab">
-
-    <fieldset>
-                <div class="input">
-                    <?php echo form_upload(array('name' => 'image[]', 'id' => 'image_input')); ?>
-                </div>
-
-        <br style="clear:both"/>
-
-    </fieldset>
-
-</div>
-    
-    <?php echo form_submit('send', lang('images_form_send')); ?>
-<?php echo form_close(); ?>
-
-<div class="clear"></div>
-<div class="ajax-loader"></div>
-    
-<br style="clear:both"/>
-    
-<?php if ( ! empty($images)): ?>
-    
-    <div id="galeriaObrazow">
-    <ul class="containerThumbnails">
-            
-<?php foreach ($images as $image): ?>
-
-        <li>
-            <div>
-                <p>
-                    <?php echo anchor(uri_string().'#', lang('images_link_edit'), array('class' => 'fotoflexer_image', 'id' => "link_edit_{$image->image_id}")); ?>
-                    | 
-                    <?php echo anchor('images/delete/'.$image->image_id, lang('images_link_delete')); ?>
-                 </p>
-                <a href="<?php echo $image->image_link; ?>">
-                    <img src="<?php echo $image->image_thumb_link; ?>"></a>
-                <p>
-                    <?php echo form_label(lang('images_link_label'), "link{$image->image_id}"); ?>
-                    <?php echo form_input(array('onclick' => 'this.focus();this.select();', 'readonly' => '', 'value' => $image->image_link, 'id' => "link{$image->image_id}")); ?>
-                </p>
-            </div>
-        </li>
-<?php endforeach; ?>
-    </ul>
-        </div>
-<div class="clear"></div>
-
-<?php echo $pagination['links']; ?>
-
-<?php else: ?>
-	<p><?php echo lang('blog_currently_no_posts');?></p>
-<?php endif; ?>
-
+<?php
+echo form_submit('save_logo', lang('logo_save'));
+?>
 {{ else }}
-    zaloguj
+<?php
+echo lang('logo_log_in');
+?>
 {{ endif }}
+<?php
+echo form_close();
