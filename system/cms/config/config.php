@@ -252,8 +252,8 @@ $config['encryption_key'] = "Jiu348^&H%fa";
 */
 $config['sess_cookie_name']		= 'pyrocms' . (ENVIRONMENT !== 'production' ? '_' . ENVIRONMENT : '');
 $config['sess_expiration']		= 0;
-$config['sess_expire_on_close']	= TRUE;
-$config['sess_encrypt_cookie']	= TRUE;
+$config['sess_expire_on_close']	= false;
+$config['sess_encrypt_cookie']	= false;
 $config['sess_use_database']	= TRUE;
 // don't change anything but the 'ci_sessions' part of this. The MSM depends on the 'default_' prefix
 $config['sess_table_name']		= 'default_ci_sessions';
