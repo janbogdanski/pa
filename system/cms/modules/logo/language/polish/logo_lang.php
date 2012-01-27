@@ -13,3 +13,4 @@ $lang['logo_field_fontShadow'] = 'Kolor cienia tekstu';
 $lang['logo_reload'] = 'Odśwież';
 $lang['logo_save'] = 'Zapisz w obrazach';
 $lang['logo_log_in'] = 'Aby zapisać logo, musisz się zalogować';
+
